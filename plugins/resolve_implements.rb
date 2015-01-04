@@ -12,14 +12,11 @@ module ResolveImprements
     str.ord
   end
 
-  def resolve_imprements
+  def resolve_iron_axe
     ShapelessRecipe.new(
       ItemStack.new(Material::IRON_INGOT, 1)
     ).add_ingredient(Material::IRON_AXE)
-    ShapelessRecipe.new(
-      ItemStack.new(Material::IRON_INGOT, 1)
-    ).add_ingredient(Material::IRON_HELMET)
   end
 
-  Bukkit.add_recipe(resolve_imprements)
+  Bukkit.add_recipe(resolve_iron_axe)
 end
