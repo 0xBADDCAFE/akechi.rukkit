@@ -29,6 +29,7 @@ rukkit:
     - virtual
     - heatstroke
     - crossbow
+    - resolve_implements
   scripts:
     - lingr
     - material_util
