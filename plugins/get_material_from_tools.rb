@@ -3,7 +3,7 @@ import 'org.bukkit.inventory.ItemStack'
 import 'org.bukkit.inventory.ShapelessRecipe'
 import 'org.bukkit.Material'
 
-module ResolveImplements
+module GetMaterialFromTools
   extend self
   extend Rukkit::Util
 
@@ -12,10 +12,10 @@ module ResolveImplements
     str.ord
   end
 
-  def resolve_implements(material, implement)
+  def get_material_from_tools(material, tool)
     ShapelessRecipe.new(
       ItemStack.new(material, 1)
-    ).add_ingredient(implement)
+    ).add_ingredient(tool)
   end
 
   [
@@ -67,13 +67,7 @@ module ResolveImplements
     [Material::LEATHER, Material::LEATHER_CHESTPLATE],
     [Material::LEATHER, Material::LEATHER_HELMET],
     [Material::LEATHER, Material::LEATHER_LEGGINGS]
-  ].each do |material, implement|
-    Bukkit.add_recipe(resolve_implements(material, implement))
+  ].each do |material, tool|
+    Bukkit.add_recipe(get_material_from_tools(material, tool))
   end
 end
-
-
-
-
-
-

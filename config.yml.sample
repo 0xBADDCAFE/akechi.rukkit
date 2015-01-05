@@ -30,6 +30,7 @@ rukkit:
     - heatstroke
     - crossbow
     - resolve_implements
+    - get_material_from_tools
   scripts:
     - lingr
     - material_util
